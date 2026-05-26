@@ -1,0 +1,40 @@
+@import './variables';
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
+
+body{
+  background:$primary-bg;
+  color:$white;
+  font-family:'Poppins',sans-serif;
+  overflow-x:hidden;
+}
+
+body::before{
+  content:'';
+  position:fixed;
+  inset:0;
+  background:
+  radial-gradient(circle at top right, rgba(24,216,255,.12), transparent 25%),
+  radial-gradient(circle at left, rgba(255,49,49,.08), transparent 25%);
+  z-index:-1;
+}
+
+.container{
+  width:92%;
+  max-width:1400px;
+  margin:auto;
+}
+
+section{
+  padding:100px 0;
+}
+
+img{
+  width:100%;
+  display:block;
+}
