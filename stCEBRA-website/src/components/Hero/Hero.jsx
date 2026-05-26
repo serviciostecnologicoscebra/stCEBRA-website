@@ -18,13 +18,10 @@ function Hero() {
           <small>
             SERVICIOS TECNOLÓGICOS
           </small>
-          <div className="hero-logo">
-
-            <img src={logo} alt="CEBRA Logo" />
-
-          </div>
+   
 
           <h1>
+            CEBRA
             Soluciones tecnológicas que
             <span> impulsan </span>
             tu mundo.
