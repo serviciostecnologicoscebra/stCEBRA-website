@@ -18,10 +18,14 @@ function Hero() {
           <small>
             SERVICIOS TECNOLÓGICOS
           </small>
+          <div className="logo-text">
+              <span className="red">CE</span>
+              <span className="cyan">B</span>
+              <span className="yellow">RA</span>
+          </div>
    
 
           <h1>
-            CEBRA
             Soluciones tecnológicas que
             <span> impulsan </span>
             tu mundo.
@@ -77,7 +81,7 @@ function Hero() {
           <div className="circle circle-1"></div>
           <div className="circle circle-2"></div>
 
-          <img src={heroImage} alt="CEBRA" />
+          <img src={logo} alt="CEBRA" />
 
         </div>
 
