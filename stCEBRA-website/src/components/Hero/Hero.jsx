@@ -1,15 +1,28 @@
 import './Hero.scss'
+
 import heroImage from '../../assets/images/hero-tech.png'
 
+import Sidebar from '../Sidebar/Sidebar'
+import logo from '../../assets/images/logo.png'
+
 function Hero() {
+
   return (
+
     <section className="hero" id="inicio">
 
-      <div className="container hero-container">
+      <div className="container hero-layout">
 
-        <div className="hero-left">
+        <div className="hero-main">
 
-          <small>SERVICIOS TECNOLÓGICOS</small>
+          <small>
+            SERVICIOS TECNOLÓGICOS
+          </small>
+          <div className="hero-logo">
+
+            <img src={logo} alt="CEBRA Logo" />
+
+          </div>
 
           <h1>
             Soluciones tecnológicas que
@@ -18,11 +31,14 @@ function Hero() {
           </h1>
 
           <p>
-            Resolvemos problemas de TI e informática con servicios
-            modernos, seguros y eficientes para empresas y hogares.
+            Resolvemos problemas de TI e informática
+            con servicios y productos modernos,
+            garantizando seguridad, confiabilidad
+            y el mejor rendimiento.
           </p>
 
           <div className="hero-buttons">
+
             <button className="primary-btn">
               WhatsApp
             </button>
@@ -30,21 +46,50 @@ function Hero() {
             <button className="secondary-btn">
               Nuestros servicios
             </button>
+
+          </div>
+
+          <div className="hero-features">
+
+            <div className="feature-box">
+              <h3>Seguridad</h3>
+              <p>Protegemos tu información.</p>
+            </div>
+
+            <div className="feature-box">
+              <h3>Confiabilidad</h3>
+              <p>Servicios garantizados.</p>
+            </div>
+
+            <div className="feature-box">
+              <h3>Rapidez</h3>
+              <p>Soluciones eficientes.</p>
+            </div>
+
+            <div className="feature-box">
+              <h3>Soporte</h3>
+              <p>Atención personalizada.</p>
+            </div>
+
           </div>
 
         </div>
 
-        <div className="hero-right">
+        <div className="hero-visual">
 
-          <div className="circle-effect"></div>
+          <div className="circle circle-1"></div>
+          <div className="circle circle-2"></div>
 
           <img src={heroImage} alt="CEBRA" />
 
         </div>
 
+        <Sidebar />
+
       </div>
 
     </section>
+
   )
 }
 
