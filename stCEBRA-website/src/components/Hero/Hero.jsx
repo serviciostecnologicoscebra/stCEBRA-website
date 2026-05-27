@@ -32,6 +32,7 @@ function Hero() {
           </h2>
 
           <p>
+            eliminar mañana
             Resolvemos problemas de TI e informática
             con servicios modernos, seguros y eficientes.
           </p>
