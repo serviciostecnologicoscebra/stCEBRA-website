@@ -58,10 +58,18 @@
   
 }
 
-/* LOGO */
+/* LOGO text */
 
-.logo-text{
-  font-size:7rem;
+.hero-logo-text{
+
+  display:flex;
+  align-items:center;
+
+  gap:0;
+
+  letter-spacing:-7px;
+
+  font-size:120px;
 
   font-family:'Orbitron',sans-serif;
 
@@ -69,7 +77,7 @@
 
   line-height:1;
 
-  margin: 0px;
+  transform:scaleY(.95);
 
   .red{
     color:$red;
@@ -257,7 +265,7 @@
     background-position:70% center;
   }
 
-  .logo-text{
+  .hero-logo-text{
     font-size:5rem;
   }
 
@@ -277,7 +285,7 @@
     background-position:75% center;
   }
 
-  .logo-text{
+  .hero-logo-text{
     font-size:4rem;
   }
 

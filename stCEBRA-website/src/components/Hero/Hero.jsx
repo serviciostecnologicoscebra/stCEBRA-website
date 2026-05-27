@@ -20,7 +20,7 @@ function Hero() {
             SERVICIOS TECNOLÓGICOS
           </small>
 
-          <h1 className="logo-text">
+          <h1 className="hero-logo-text">
             <span className="red">CE</span>
             <span className="cyan">B</span>
             <span className="yellow">RA</span>
