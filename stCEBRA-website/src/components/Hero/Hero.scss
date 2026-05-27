@@ -1,249 +1,258 @@
 @import '../../styles/variables';
 
 .hero{
-  padding-top:60px;
+  position:relative;
 
-  .hero-layout{
-    display:grid;
+  min-height:100vh;
 
-    grid-template-columns:
-    1.2fr
-    1fr
-    350px;
+  display:flex;
+  align-items:center;
 
-    gap:30px;
+  overflow:hidden;
 
-    align-items:start;
+  background-image:url('../../assets/images/hero-bg.png');
+  background-size:100%;
+  background-position:right -90px;
+  background-repeat:no-repeat;
+}
+
+/* OVERLAY OSCURO */
+
+.hero-overlay{
+  position:absolute;
+  inset:0;
+
+  background:
+  linear-gradient(
+    90deg,
+    rgba(0,0,0,.92) 0%,
+    rgba(0,0,0,.72) 35%,
+    rgba(0,0,0,.25) 70%,
+    rgba(0,0,0,.05) 100%
+  );
+}
+
+/* LAYOUT */
+
+.hero-layout{
+  position:relative;
+  z-index:5;
+
+  width:100%;
+}
+
+.hero-main{
+  max-width:650px;
+}
+
+/* SMALL TEXT */
+
+.hero small{
+  color:$cyan;
+
+  font-size:1rem;
+
+  letter-spacing:6px;
+
+  font-weight:700;
+}
+
+/* LOGO */
+
+.logo-text{
+  font-size:7rem;
+
+  font-family:'Orbitron',sans-serif;
+
+  font-weight:900;
+
+  line-height:1;
+
+  margin:10px 0 25px;
+
+  .red{
+    color:$red;
   }
 
-  .hero-main{
-    padding-top:40px;
-
-    small{
-      color:$cyan;
-      letter-spacing:5px;
-      font-weight:700;
-      font-size: 20px;
-    }
-    .logo-text{
-      font-size: 120px;
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 900;
-    line-height: 1;
-
-    .red{
-      color: $red;
-    }
-
-    .cyan{
-      color: $cyan;
-    }
-
-    .yellow{
-      color: $yellow;
-    }
-
-    }
-
-    h1{
-      font-size:35px;
-      line-height:1;
-      margin:25px 0;
-
-      font-weight:900;
-      width: 500px;
-
-      span{
-        color:$cyan;
-      }
-    }
-
-    p{
-      color:$text;
-      line-height:1.9;
-      font-size:20px;
-      max-width:500px;
-    }
+  .cyan{
+    color:$cyan;
   }
 
-  .hero-buttons{
-    display:flex;
-    gap:20px;
+  .yellow{
+    color:$yellow;
+  }
+}
 
-    margin:40px 0;
+/* TITULO */
+
+.hero h2{
+  font-size:4rem;
+
+  line-height:1.05;
+
+  font-weight:900;
+
+  margin-bottom:25px;
+
+  color:white;
+
+  span{
+    color:$cyan;
+  }
+}
+
+/* PARAGRAFO */
+
+.hero p{
+  color:$text;
+
+  font-size:1.2rem;
+
+  line-height:1.8;
+
+  max-width:600px;
+}
+
+/* BOTONES */
+
+.hero-buttons{
+  display:flex;
+
+  gap:20px;
+
+  margin-top:45px;
+}
+
+.primary-btn{
+  background:$red;
+
+  border:none;
+
+  color:white;
+
+  padding:18px 40px;
+
+  border-radius:16px;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  box-shadow:$shadow-red;
+
+  transition:$transition;
+
+  &:hover{
+    transform:translateY(-4px);
+  }
+}
+
+.secondary-btn{
+  background:rgba(255,255,255,.06);
+
+  border:1px solid rgba(255,255,255,.1);
+
+  color:white;
+
+  padding:18px 40px;
+
+  border-radius:16px;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:$transition;
+
+  &:hover{
+    border-color:$cyan;
+  }
+}
+
+/* FEATURES */
+
+.hero-features{
+  display:flex;
+
+  gap:20px;
+
+  margin-top:55px;
+}
+
+.feature-box{
+  background:rgba(10,15,35,.72);
+
+  backdrop-filter:blur(12px);
+
+  border:1px solid rgba(255,255,255,.08);
+
+  padding:25px;
+
+  border-radius:20px;
+
+  min-width:180px;
+
+  transition:$transition;
+
+  &:hover{
+    transform:translateY(-6px);
+
+    border-color:$cyan;
+
+    box-shadow:$shadow-blue;
   }
 
-  .primary-btn{
-    background:$red;
-
-    border:none;
-
+  h3{
+    margin-bottom:12px;
     color:white;
-
-    padding:20px 70px;
-
-    border-radius:16px;
-
-    font-weight:700;
-    font-size: 20px;
-
-    cursor:pointer;
-
-    box-shadow:$shadow-red;
   }
 
-  .secondary-btn{
-    background:transparent;
+  p{
+    font-size:.95rem;
+  }
+}
 
-    border:1px solid rgba(255,255,255,.1);
+/* RESPONSIVE */
 
-    color:white;
+@media(max-width:1100px){
 
-    padding:20px 70px;
+  .hero{
+    background-position:70% center;
+  }
 
-    border-radius:16px;
-    font-size: 20px;
+  .logo-text{
+    font-size:5rem;
+  }
 
-    cursor:pointer;
+  .hero h2{
+    font-size:3rem;
   }
 
   .hero-features{
-    display:grid;
-
-    grid-template-columns:repeat(4,1fr);
-
-    gap:20px;
-
-    margin-top:40px;
+    flex-wrap:wrap;
   }
-
-  .feature-box{
-    background:$card-bg;
-
-    border:1px solid $border;
-
-    padding:20px 50px;
-
-    border-radius:20px;
-
-    transition:$transition;
-
-    &:hover{
-      transform:translateY(-6px);
-      border-color:$cyan;
-      box-shadow:$shadow-blue;
-    }
-
-    h3{
-      margin-bottom:10px;
-      font-size: 20px;
-    }
-
-    p{
-      font-size:20px;
-    }
-  }
-
-  .hero-visual{
-    position:relative;
-
-    height:760px;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    img{
-      position:relative;
-      z-index:5;
-      width:100%;
-      max-width:540px;
-    }
-  }
-
-  .circle{
-    position:absolute;
-    border-radius:50%;
-  }
-
-  .circle-1{
-    width:580px;
-    height:580px;
-
-    border:12px solid rgba(255,255,255,.9);
-  }
-
-  .circle-2{
-    width:700px;
-    height:700px;
-
-    border:12px dashed rgba(255,49,49,.45);
-
-    animation:rotateCircle 30s linear infinite;
-  }
-}
-
-@keyframes rotateCircle{
-
-  from{
-    transform:rotate(0deg);
-  }
-
-  to{
-    transform:rotate(360deg);
-  }
-
-}
-
-@media(max-width:1400px){
-
-  .hero{
-
-    .hero-layout{
-      grid-template-columns:1fr;
-    }
-
-    .hero-visual{
-      height:600px;
-    }
-
-  }
-
 }
 
 @media(max-width:768px){
 
   .hero{
-
-    .hero-main h1{
-      font-size:4rem;
-    }
-
-    .hero-features{
-      grid-template-columns:1fr 1fr;
-    }
-
-    .circle-1{
-      width:320px;
-      height:320px;
-    }
-
-    .circle-2{
-      width:400px;
-      height:400px;
-    }
-
+    padding:120px 0 80px;
+    background-position:75% center;
   }
 
-}
+  .logo-text{
+    font-size:4rem;
+  }
 
-.hero-logo{
-  position:absolute;
-  z-index:10;
+  .hero h2{
+    font-size:2.5rem;
+  }
 
-  img{
-    width:280px;
-    object-fit:contain;
+  .hero-buttons{
+    flex-direction:column;
+  }
+
+  .hero-features{
+    flex-direction:column;
   }
 }
- 
