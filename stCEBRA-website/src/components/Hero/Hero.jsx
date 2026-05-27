@@ -57,8 +57,8 @@ function Hero() {
             </div>
 
             <div className="feature-box">
-              <h3>Calidad</h3>
-              <p>Soluciones premium.</p>
+              <h3>Confiabilidad</h3>
+              <p>Servicios garantizados y de calidad.</p>
             </div>
 
           </div>
