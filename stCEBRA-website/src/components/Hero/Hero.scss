@@ -32,6 +32,26 @@
   );
 }
 
+.floating-logo{
+
+  position:absolute;
+
+  z-index:4;
+
+  width:170px;
+
+  top: 30%;
+  right:24%;
+
+  animation:
+    floatLaptopLogo 4s ease-in-out infinite;
+
+  filter:
+    drop-shadow(0 0 12px rgba(0,217,255,.8))
+    drop-shadow(0 0 35px rgba(0,217,255,.45));
+
+}
+
 /* LAYOUT */
 
 .hero-layout{
@@ -300,4 +320,20 @@
   .hero-features{
     flex-direction:column;
   }
+}
+
+@keyframes floatLaptopLogo{
+
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-14px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+
 }

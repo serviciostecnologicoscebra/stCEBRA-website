@@ -2,7 +2,7 @@ import './Hero.scss'
 
 //icons
 import {ShieldCheck, Zap, Settings} from 'lucide-react'
-
+import logo from '../../assets/images/logo.png'
 
 function Hero() {
 
@@ -11,6 +11,11 @@ function Hero() {
     <section className="hero" id="inicio">
 
       <div className="hero-overlay"></div>
+        <img
+          src={logo}
+          alt="CEBRA"
+          className="floating-logo"
+        />
 
       <div className="container hero-layout">
 
@@ -32,7 +37,6 @@ function Hero() {
           </h2>
 
           <p>
-            eliminar mañana
             Resolvemos problemas de TI e informática
             con servicios modernos, seguros y eficientes.
           </p>
