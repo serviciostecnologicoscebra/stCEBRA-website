@@ -1,7 +1,8 @@
 import './Hero.scss'
 
 //icons
-import ShieldCheckIcon from '../../assets/icons/shield-check-icon'
+import {ShieldCheck, Zap, Settings} from 'lucide-react'
+
 
 function Hero() {
 
@@ -50,19 +51,36 @@ function Hero() {
           <div className="hero-features">
 
             <div className="feature-box">
-              <ShieldCheckIcon/>
-              <h3>Seguridad</h3>
-              <p>Protección avanzada.</p>
+
+              <ShieldCheck className='heroFeature-icon'/>
+
+              <div className="feature-content">
+                <h3>Seguridad</h3>
+                <p>Protección avanzada.</p>
+              </div>
+
             </div>
 
             <div className="feature-box">
-              <h3>Rapidez</h3>
-              <p>Soporte eficiente.</p>
+
+              <Zap className='heroFeature-icon'/>
+
+              <div className="feature-content">
+                <h3>Rapidez</h3>
+                <p>Soporte eficiente.</p>
+              </div>
+
             </div>
 
             <div className="feature-box">
-              <h3>Confiabilidad</h3>
-              <p>Servicios garantizados y de calidad.</p>
+
+              <Settings className='heroFeature-icon'/>
+
+              <div className="feature-content">
+                <h3>Confiabilidad</h3>
+                <p>Servicios garantizados y de calidad.</p>
+              </div>
+
             </div>
 
           </div>
