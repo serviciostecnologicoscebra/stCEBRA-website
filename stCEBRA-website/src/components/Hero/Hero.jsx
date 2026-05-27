@@ -1,5 +1,8 @@
 import './Hero.scss'
 
+//icons
+import ShieldCheckIcon from '../../assets/icons/shield-check-icon'
+
 function Hero() {
 
   return (
@@ -47,6 +50,7 @@ function Hero() {
           <div className="hero-features">
 
             <div className="feature-box">
+              <ShieldCheckIcon/>
               <h3>Seguridad</h3>
               <p>Protección avanzada.</p>
             </div>
