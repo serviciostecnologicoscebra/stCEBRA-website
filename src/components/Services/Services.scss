@@ -3,7 +3,8 @@
 .services {
   
   .section-title{
-    margin-bottom:60px;
+    margin-bottom:120px;
+    position: relative;
 
     small{
       color:$red;
@@ -83,6 +84,19 @@
   }
 }
 
+.floating-services{
+
+  width: 350px;
+  height:350px;
+
+  position:absolute;
+
+  right:120px;
+
+  top: -50px;
+
+
+}
 @media(max-width:1100px){
 
   .services{

@@ -1,15 +1,16 @@
 import './Services.scss'
+import imgServices from '../../assets/images/services.png'
 
 const services = [
   {
     icon: '🎧',
     title: 'Accesorios de Tecnología',
-    desc: 'Periféricos y accesorios premium para mejorar tu experiencia.',
+    desc: 'Los mejores accesorios para mejorar tu experiencia.',
   },
   {
     icon: '💾',
     title: 'Repuestos Informáticos',
-    desc: 'Componentes originales compatibles y garantizados.',
+    desc: 'Componentes originales y compatibles con garantía.',
   },
   {
     icon: '💻',
@@ -18,17 +19,17 @@ const services = [
   },
   {
     icon: '🛠️',
-    title: 'Problemas de TI',
+    title: 'Problemas de TI e Informática',
     desc: 'Solucionamos errores de hardware y software.',
   },
   {
     icon: '🪟',
-    title: 'Instalación de Programas',
+    title: 'Instalación y Activación de Programas Originales',
     desc: 'Software original y configuraciones profesionales.',
   },
   {
     icon: '🌐',
-    title: 'Desarrollo Web',
+    title: 'Desarrollo de Páginas y Sistemas Web',
     desc: 'Creamos páginas y sistemas modernos.',
   },
   {
@@ -38,8 +39,8 @@ const services = [
   },
   {
     icon: '🔌',
-    title: 'Cableado Estructurado',
-    desc: 'Redes LAN rápidas, seguras y organizadas.',
+    title: 'Instalación de Cableado Estructurado de Red',
+    desc: 'Redes estables, organizadas y de alto rendimiento.',
   },
 ]
 
@@ -50,6 +51,7 @@ function Services() {
       <div className="container">
 
         <div className="section-title">
+          
           <small>NUESTROS SERVICIOS</small>
 
           <h2>
@@ -61,6 +63,13 @@ function Services() {
             Servicios tecnológicos modernos y eficientes para empresas,
             negocios y clientes particulares.
           </p>
+          <div>
+          <img
+                    src={imgServices}
+                    alt="CEBRA"
+                    className="floating-services"
+                  />
+                  </div>
         </div>
 
         <div className="services-grid">
