@@ -6,7 +6,8 @@
   min-height:100vh;
 
   display:flex;
-  align-items:center;
+  align-items:flex-start;
+  padding-bottom: 0px;
 
   overflow:hidden;
 
@@ -340,12 +341,12 @@
 
   .hero{
 
-    min-height:auto;
+    min-height:fit-content;
 
     padding:
-    10px
+    20px
     0
-    50px;
+    30px;
 
     background-size:160%;
 
@@ -415,7 +416,7 @@
 
     gap:10px;
 
-    margin-top:140px;
+    margin-top:25px;
   }
 
   .primary-btn,
