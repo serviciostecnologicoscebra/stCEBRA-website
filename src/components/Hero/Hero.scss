@@ -454,8 +454,24 @@
 
     right:38%;
 
-    opacity:.65;
   }
+
+.hero-scrolled{
+
+  .hero-buttons{
+
+    transform:translateY(10px);
+
+    opacity:.9;
+
+  }
+  
+  .floating-logo{
+
+    transform:scale(1.08);
+  }
+
+}
 }
 
 @keyframes floatLaptopLogo{
