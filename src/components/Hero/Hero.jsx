@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import './Hero.scss'
 
 //icons
@@ -6,9 +7,34 @@ import logo from '../../assets/images/logo.png'
 
 function Hero() {
 
+  //scroll
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+
+    const handleScroll = () => {
+
+      if(window.scrollY > 50){
+        setScrolled(true)
+      }else{
+        setScrolled(false)
+      }
+
+    }
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () =>
+      window.removeEventListener('scroll', handleScroll)
+
+  }, [])
+
   return (
 
-    <section className="hero" id="inicio">
+    <section
+      className={`hero ${scrolled ? 'hero-scrolled' : ''}`}
+      id="inicio"
+    >
 
       <div className="hero-overlay"></div>
         <img

@@ -14,8 +14,39 @@
   background-size:100%;
   background-position:right -90px;
   background-repeat:no-repeat;
+  
+  transition:1s ease;
 }
+.hero-scrolled{
 
+  .hero-overlay{
+
+    background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.55) 0%,
+      rgba(0,0,0,.35) 50%,
+      rgba(0,0,0,.1) 100%
+    );
+  }
+  .hero-buttons{
+
+    transform:translateY(10px);
+
+    opacity:.9;
+
+  }
+  
+  .floating-logo{
+
+    filter:
+      drop-shadow(0 0 20px rgba(0,217,255,1))
+      drop-shadow(0 0 50px rgba(0,217,255,.8));
+
+    transform:scale(1.08);
+  }
+
+}
 /* OVERLAY OSCURO */
 
 .hero-overlay{
@@ -37,6 +68,8 @@
   position:absolute;
 
   z-index:4;
+
+  transition:1s ease;
 
   width:170px;
 
@@ -152,6 +185,9 @@
   gap:20px;
 
   margin-top:25px;
+  transition:
+  transform .7s ease,
+  opacity .7s ease;
 }
 
 .primary-btn{
@@ -309,11 +345,11 @@
     0
     50px;
 
-    background-size:230%;
+    background-size:160%;
 
     background-position:
-    72%
-    bottom;
+    100%
+    20%;
 
   }
 
@@ -377,7 +413,7 @@
 
     gap:10px;
 
-    margin-top:30px;
+    margin-top:140px;
   }
 
   .primary-btn,
@@ -412,13 +448,13 @@
 
   .floating-logo{
 
-    width:110px;
+    width:80px;
 
-    top:68%;
+    top:26%;
 
-    right:32%;
+    right:38%;
 
-    opacity:.85;
+    opacity:.65;
   }
 }
 
