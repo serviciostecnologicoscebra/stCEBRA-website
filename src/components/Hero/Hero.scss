@@ -338,6 +338,22 @@
 }
 
 @media(max-width:768px){
+.hero-scrolled .hero-buttons{
+
+  transform:translateY(3px);
+
+  opacity:.9;
+}
+
+.hero-scrolled .floating-logo{
+
+  transform:scale(1.08);
+
+  filter:
+    drop-shadow(0 0 30px rgba(0,217,255,1))
+    drop-shadow(0 0 80px rgba(0,217,255,.9))
+    drop-shadow(0 0 120px rgba(0,217,255,.7));
+}
 
   .hero{
 
@@ -458,23 +474,6 @@
     right:38%;
 
   }
-
-.hero-scrolled{
-
-  .hero-buttons{
-
-    transform:translateY(10px);
-
-    opacity:.9;
-
-  }
-  
-  .floating-logo{
-
-    transform:scale(1.08);
-  }
-
-}
 }
 
 @keyframes floatLaptopLogo{
