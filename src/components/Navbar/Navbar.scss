@@ -162,13 +162,18 @@
       right:15px;
 
       width:180px;
-      height:auto;
 
-      background:#050b1c;
+      background:rgba(5,11,28,.93);
 
-      border:1px solid rgba(255,255,255,.1);
+      backdrop-filter:blur(12px);
+      -webkit-backdrop-filter:blur(12px);
 
-      border-radius:12px;
+      border:1px solid rgba(0,217,255,.25);
+
+      border-radius:16px;
+
+      box-shadow:
+        0 0 20px rgba(0,217,255,.12);
 
       padding:15px;
 
@@ -193,13 +198,19 @@
 
     nav a{
 
-      font-size:1.2rem;
+      font-size:0.8rem;
 
       font-weight:700;
 
       color:white;
 
       text-decoration:none;
+      transition:.3s ease;
+
+      &:hover{
+        color:#00d9ff;
+        transform:translateX(5px);
+      }
     }
 
     .mobile-menu{
