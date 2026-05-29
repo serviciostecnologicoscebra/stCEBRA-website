@@ -36,7 +36,15 @@ function Navbar() {
 
         </div>
 
-        {/* MENU */}
+        {/* FONDO-OSCURO */}
+        {menuOpen && (
+          <div
+            className="menu-overlay"
+            onClick={() => setMenuOpen(false)}
+          />
+        )}
+
+        {/* MENU */} 
         <nav className={menuOpen ? 'nav-open' : ''}>
           <a href="#inicio">INICIO</a>
           <a href="#servicios">SERVICIOS</a>
