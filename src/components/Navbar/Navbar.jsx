@@ -1,9 +1,15 @@
+import { useState } from 'react'
+
 import './Navbar.scss'
 import { FaWhatsapp } from 'react-icons/fa'
+import { Menu, X } from 'lucide-react'
 
 import logo from '../../assets/images/logo.png'
 
 function Navbar() {
+
+  const [menuOpen, setMenuOpen] = useState(false)
+
   return (
     <header className="navbar">
 
@@ -31,17 +37,24 @@ function Navbar() {
         </div>
 
         {/* MENU */}
-        <nav>
+        <nav className={menuOpen ? 'nav-open' : ''}>
           <a href="#inicio">INICIO</a>
           <a href="#servicios">SERVICIOS</a>
           <a href="#nosotros">¿POR QUÉ ELEGIRNOS?</a>
           <a href="#contacto">CONTACTO</a>
         </nav>
 
+        <div
+          className="mobile-menu"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? <X size={28} /> : <Menu size={28} />}
+        </div>
+
         {/* BOTON */}
         <button>
           <FaWhatsapp />
-          +51 906 257 485
+          906 257 485
         </button>
 
       </div>
