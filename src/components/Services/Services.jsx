@@ -78,7 +78,7 @@ function Services() {
             <div className="service-card" key={index}>
              <div className="service-left">
               <div className="service-image">
-                <p>{service.icon}</p>
+                <span>{service.icon}</span>
               </div>
 
               <div className="service-content">
