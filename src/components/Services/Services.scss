@@ -33,7 +33,7 @@
 
   .services-grid{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns:repeat(4,minmax(0,1fr));
     gap:25px;
   }
 
@@ -72,13 +72,14 @@
       padding:25px;
 
       h3{
-        font-size:1.4rem;
+        font-size:1.2rem;
         margin-bottom:15px;
       }
 
       p{
         color:$text;
         line-height:1.7;
+        font-size: 1rem;
       }
     }
   }
@@ -94,6 +95,12 @@
   right:120px;
 
   top: -50px;
+  animation:
+    floatLaptopLogo 4s ease-in-out infinite;
+  
+  filter:
+    drop-shadow(0 0 12px rgba(0,217,255,.8))
+    drop-shadow(0 0 35px rgba(0,217,255,.45));
 
 
 }
@@ -113,14 +120,117 @@
 
   .services{
 
-    .section-title h2{
-      font-size:2.8rem;
+    padding-top: 5px;
+
+    .section-title{
+    margin-bottom:120px;
+    position: relative;
+
+    small{
+      color:$red;
+      letter-spacing:2px;
+      font-weight:700;
+      font-size: 0.8rem;
+      
     }
 
-    .services-grid{
-      grid-template-columns:1fr;
+    h2{
+      font-size:1.05rem;
+      margin:20px 0;
+      font-weight:900;
+
+      span{
+        color:$cyan;
+      }
     }
+    p{
+      color:$text;
+      max-width:700px;
+      line-height:1.8; 
+      font-size: 0.8rem;
+    }
+  }
+  
+  .floating-services{
+
+      width: 250px;
+      height:250px;
+
+      position:absolute;
+
+      right:20px;
+
+      top: 170px;
+      animation:
+        floatLaptopLogo 4s ease-in-out infinite;
+      
+      filter:
+        drop-shadow(0 0 12px rgba(0,217,255,.8))
+        drop-shadow(0 0 35px rgba(0,217,255,.45));
+
 
   }
+  .services-grid{
 
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+    margin-top: 250px;
+  }
+
+  .service-card{
+
+    width:100%;
+
+    min-width:100%;
+
+    flex-direction:row;
+
+    align-items:center;
+
+    justify-content:space-between;
+  }
+  .service-left{
+
+      display:flex;
+
+      align-items:center;
+
+      gap:0px;
+
+      width:100%;
+      height:40px;
+      
+  }
+
+  .service-image{
+
+      width:60px;
+      height:60px;
+
+      min-width:60px;
+
+      display:flex;
+
+      justify-content:center;
+
+      align-items:center;
+     
+  }
+
+  .service-content{
+
+      h3{
+        font-size:0.8rem !important;
+        margin-bottom: 0px !important;
+      }
+
+      p{
+        display:none;
+      }
+  }
+
+}
 }

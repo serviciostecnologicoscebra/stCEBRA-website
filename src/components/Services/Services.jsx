@@ -76,9 +76,9 @@ function Services() {
 
           {services.map((service, index) => (
             <div className="service-card" key={index}>
-
+             <div className="service-left">
               <div className="service-image">
-                <span>{service.icon}</span>
+                <p>{service.icon}</p>
               </div>
 
               <div className="service-content">
@@ -86,6 +86,7 @@ function Services() {
                 <p>{service.desc}</p>
               </div>
 
+             </div>
             </div>
           ))}
 
