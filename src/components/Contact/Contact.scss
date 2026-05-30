@@ -116,6 +116,7 @@
 
   .contact-box{
     display: flex;
+    flex-direction: column;
     background:$card-bg;
     border:1px solid $border;
     border-radius:35px;
@@ -156,7 +157,7 @@
       display:flex;
       flex-direction:column;
       gap:20px;
-      margin-top: 20px;
+      margin-top: 30px;
     }
     .contact-item{
 
@@ -183,7 +184,7 @@
   }
 
   .contact-form{
-    display:none;
+    display:flex;
     flex-direction:column;
     gap:20px;
 
