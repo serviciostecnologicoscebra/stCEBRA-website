@@ -1,8 +1,78 @@
+import { useState } from 'react'
+
 import './Contact.scss'
 //icons
 import {Phone, Headset, MapPin} from 'lucide-react'
+//email
+import emailjs from '@emailjs/browser'
 
 function Contact() {
+
+  // email
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+  })
+
+  //capturar cambios
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    })
+  }
+
+  //envio correo
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+
+    try {
+
+      await emailjs.send(
+        'SERVICE_ID',
+        'TEMPLATE_ID',
+        {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+        },
+        'PUBLIC_KEY'
+      )
+
+      alert('Mensaje enviado correctamente')
+
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        message: ''
+      })
+
+    } catch (error) {
+
+      console.error(error)
+      alert('Error al enviar mensaje')
+
+    }
+  }
+
+  //whatsapp
+  const whatsappNumber = '51906257485'
+
+  const openWhatsApp = () => {
+
+    const message =
+      'Hola, deseo información sobre sus servicios tecnológicos.'
+
+    window.open(
+      `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`,
+      '_blank'
+    )
+  }
+
   return (
     <section className="contact" id="contacto">
 
@@ -41,21 +111,50 @@ function Contact() {
                 <p>Atención nacional</p>
               </div>
 
+              <button
+                className="primary-btn"
+                onClick={openWhatsApp}
+              >
+                WhatsApp
+              </button>
+
             </div>
 
           </div>
 
-          <form className="contact-form">
+          <form className="contact-form" onSubmit={handleSubmit}>
 
-            <input type="text" placeholder="Nombre completo" />
+            <input 
+              type="text"
+              name="name"
+              placeholder="Nombre completo"
+              value={formData.name}
+              onChange={handleChange}
+            />
 
-            <input type="email" placeholder="Correo electrónico" />
+            <input 
+              type="email" 
+              placeholder="Correo electrónico" 
+              value={formData.email}
+              onChange={handleChange}
+            />
 
-            <input type="text" placeholder="Teléfono" />
+            <input 
+              type="tel" 
+              name="phone"
+              placeholder="Teléfono"
+              value={formData.phone}
+              onChange={handleChange} 
+            />
 
-            <textarea placeholder="Escribe tu mensaje"></textarea>
+            <textarea 
+              name="message"
+              placeholder="Escribe tu mensaje"
+              value={formData.message}
+              onChange={handleChange}
+            />
 
-            <button>
+            <button type="submit">
               Enviar consulta
             </button>
 
