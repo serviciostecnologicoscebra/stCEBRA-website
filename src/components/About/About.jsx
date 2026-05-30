@@ -1,9 +1,19 @@
 import './About.scss'
 import technician from '../../assets/images/technician.jpg'
 
+//icons
+//icons
+import {ShieldCheck} from 'lucide-react'
+//img
+import aboutBg from '../../assets/images/about-bg.png'
+
 function About() {
   return (
-    <section className="about" id="nosotros">
+    <section
+      className="about"
+      id="nosotros"
+      style={{ backgroundImage: `url(${aboutBg})` }}
+    >
 
       <div className="container about-container">
 
@@ -43,14 +53,17 @@ function About() {
               <p>Garantía en todos nuestros servicios</p>
             </div>
 
+            <div className="about-item">
+              <span></span>
+              <p>Operamos a nivel nacional</p>
+            </div>
+
           </div>
 
         </div>
 
-        <div className="about-right">
-
-          <img src={technician} alt="Tecnología CEBRA" />
-
+        <div className="about-box">
+         <ShieldCheck className='about-icon'/>
           <div className="floating-card">
             Calidad, Seguridad y Confianza
           </div>
