@@ -29,6 +29,16 @@ function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault()
 
+    if (
+      !formData.name.trim() ||
+      !formData.email.trim() ||
+      !formData.phone.trim() ||
+      !formData.message.trim()
+    ) {
+      toast.error('Completa todos los campos obligatorios')
+      return
+    }
+
     try {
 
       await emailjs.send(
@@ -135,6 +145,7 @@ function Contact() {
               placeholder="Nombre completo"
               value={formData.name}
               onChange={handleChange}
+              required
             />
 
             <input 
@@ -143,6 +154,7 @@ function Contact() {
               placeholder="Correo electrónico" 
               value={formData.email}
               onChange={handleChange}
+              required
             />
 
             <input 
@@ -151,6 +163,7 @@ function Contact() {
               placeholder="Teléfono"
               value={formData.phone}
               onChange={handleChange} 
+              required
             />
 
             <textarea 
@@ -158,6 +171,7 @@ function Contact() {
               placeholder="Escribe tu mensaje"
               value={formData.message}
               onChange={handleChange}
+              required
             />
 
             <button type="submit">
