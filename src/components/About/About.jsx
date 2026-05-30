@@ -64,7 +64,7 @@ function About() {
 
         <div className="about-box">
          <ShieldCheck className='about-icon'/>
-          <div className="floating-card">
+          <div className="about-floating-card">
             Calidad, Seguridad y Confianza
           </div>
 
