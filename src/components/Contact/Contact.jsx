@@ -1,4 +1,6 @@
 import './Contact.scss'
+//icons
+import {Phone, Headset, MapPin} from 'lucide-react'
 
 function Contact() {
   return (
@@ -17,15 +19,15 @@ function Contact() {
               <span> ayudarte</span>
             </h2>
 
-            <p>
+            <p className='contact-info-p'>
               Nuestro equipo está preparado para brindarte
               soluciones rápidas y profesionales.
             </p>
 
             <div className="contact-data">
-              <p>📱 +51 906 257 485</p>
-              <p>📍 Piura, Perú</p>
-              <p>🚀 Atención nacional</p>
+              <p><Phone/>  906 257 485</p>
+              <p><MapPin />  Paita, Piura, Perú</p>
+              <p><Headset /> Atención nacional</p>
             </div>
 
           </div>
