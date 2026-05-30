@@ -1,6 +1,7 @@
 import { useState } from 'react'
 
 import './Contact.scss'
+import toast from 'react-hot-toast'
 //icons
 import {Phone, Headset, MapPin} from 'lucide-react'
 //email
@@ -42,7 +43,9 @@ function Contact() {
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
 
-      alert('Mensaje enviado correctamente')
+      toast.success(
+        'Solicitud enviada correctamente. Te responderemos pronto.'
+      )
 
       setFormData({
         name: '',
@@ -54,7 +57,9 @@ function Contact() {
     } catch (error) {
 
       console.error(error)
-      alert('Error al enviar mensaje')
+      toast.error(
+        'No se pudo enviar la solicitud. Inténtalo nuevamente.'
+      )
 
     }
   }
