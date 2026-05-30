@@ -168,37 +168,20 @@
 @media(max-width:768px){
 
   .about{
-
+  min-height: auto;
+ 
   display: flex;
-  align-items: center;
-  padding-top: 10px;
+  
+  padding-top:0px;
+  padding-bottom: 100px;
 
   background-size: 100%;
-  background-position: right 12%;
+  background-position: right 40%;
   background-repeat: no-repeat;
 
   overflow: hidden;
 
-  .about::before{
-
-    content:'';
-
-    position:absolute;
-
-    inset:0;
-
-    background:
-      linear-gradient(
-        90deg,
-        rgba(0,0,0,.90) 0%,
-        rgba(0,0,0,.70) 35%,
-        rgba(0,0,0,.35) 70%,
-        rgba(0,0,0,.15) 100%
-      );
-
-    z-index:1;
-  }
-
+  
   .about-container{
 
     display:block;
@@ -262,7 +245,7 @@
     align-items:flex-start;
     gap:10px;
     position:absolute;
-    bottom:350px;
+    bottom:5px;
     left:40px;
 
     background:rgba(10,15,35,.72);
