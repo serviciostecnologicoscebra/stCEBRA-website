@@ -25,9 +25,22 @@ function Contact() {
             </p>
 
             <div className="contact-data">
-              <p><Phone/>  906 257 485</p>
-              <p><MapPin />  Paita, Piura, Perú</p>
-              <p><Headset /> Atención nacional</p>
+
+              <div className="contact-item">
+                <Phone />
+                <p>906 257 485</p>
+              </div>
+
+              <div className="contact-item">
+                <MapPin />
+                <p>Paita, Piura, Perú</p>
+              </div>
+
+              <div className="contact-item">
+                <Headset />
+                <p>Atención nacional</p>
+              </div>
+
             </div>
 
           </div>
