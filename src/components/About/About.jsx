@@ -26,7 +26,7 @@ function About() {
             <span> competencia</span>
           </h2>
 
-          <p>
+          <p className='about-left-p'>
             Ofrecemos soluciones tecnológicas modernas con atención
             personalizada, soporte eficiente y garantía profesional.
           </p>
