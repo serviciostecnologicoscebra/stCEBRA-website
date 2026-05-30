@@ -31,15 +31,15 @@ function Contact() {
     try {
 
       await emailjs.send(
-        'SERVICE_ID',
-        'TEMPLATE_ID',
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         {
           name: formData.name,
           email: formData.email,
           phone: formData.phone,
           message: formData.message,
         },
-        'PUBLIC_KEY'
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
 
       alert('Mensaje enviado correctamente')
