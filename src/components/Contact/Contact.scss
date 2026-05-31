@@ -69,6 +69,25 @@
       color:$text;
       font-size: 1.2rem;
     }
+    .primary-btn{
+      display:flex;
+      justify-content: center;
+      align-items:center;
+      margin-top: 18px;
+      background-color: $green;
+      gap:5px;
+      svg{
+        width: 18px;
+        height: 18px;
+       
+      }
+      p{
+        text-align: center;
+        margin:0;
+        font-size: 1rem;
+      }
+      
+    }
   }
 
   .contact-form{
@@ -76,6 +95,11 @@
     flex-direction:column;
     gap:20px;
 
+    small{
+      font-size: 1rem;
+      padding-left: 8px;
+      color:$text;
+    }
     input,
     textarea{
       background:#020617;

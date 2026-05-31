@@ -4,6 +4,8 @@ import './Contact.scss'
 import toast from 'react-hot-toast'
 //icons
 import {Phone, Headset, MapPin} from 'lucide-react'
+import { FaWhatsapp } from 'react-icons/fa'
+
 //email
 import emailjs from '@emailjs/browser'
 
@@ -130,7 +132,8 @@ function Contact() {
                 className="primary-btn"
                 onClick={openWhatsApp}
               >
-                WhatsApp
+               <FaWhatsapp/>  
+               <p>WhatsApp</p>
               </button>
 
             </div>
@@ -138,7 +141,7 @@ function Contact() {
           </div>
 
           <form className="contact-form" onSubmit={handleSubmit}>
-
+           <small>Consultar por Correo :</small>
             <input 
               type="text"
               name="name"
