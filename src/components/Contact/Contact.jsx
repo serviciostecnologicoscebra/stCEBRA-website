@@ -4,7 +4,7 @@ import './Contact.scss'
 import toast from 'react-hot-toast'
 //icons
 import {Phone, Headset, MapPin} from 'lucide-react'
-import { FaWhatsapp } from 'react-icons/fa'
+import { FaWhatsapp, FaFacebook, FaTiktok } from 'react-icons/fa'
 
 //email
 import emailjs from '@emailjs/browser'
@@ -126,6 +126,18 @@ function Contact() {
               <div className="contact-item">
                 <Headset />
                 <p>Atención nacional</p>
+              </div>
+
+              <div className="contact-item">
+                <FaFacebook />
+                <p onClick={() => window.open("https://www.facebook.com/share/1EdTCzqLSc/", "_blank")}
+                   style={{ cursor: "pointer" }}>Facebook</p>
+              </div>
+
+              <div className="contact-item">
+                <FaTiktok />
+                <p onClick={() => window.open("https://www.tiktok.com/@stcebra", "_blank")}
+                   style={{ cursor: "pointer" }}>TikTok</p>
               </div>
 
               <button

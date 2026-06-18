@@ -8,19 +8,21 @@ function Footer() {
 
         <div className="footer-logo">
 
-          <h2>
-            <span>CE</span>BRA
-          </h2>
+          <p className="top-text">
+              SERVICIOS TECNOLÓGICOS
+            </p>
 
-          <p>
-            Servicios Tecnológicos
-          </p>
+            <h2 className="logo-text">
+              <span className="red">CE</span>
+              <span className="cyan">B</span>
+              <span className="yellow">RA</span>
+            </h2>
 
         </div>
 
         <div className="footer-copy">
-          © 2025 Servicios Tecnológicos CEBRA.
-          Todos los derechos reservados.
+          © Servicios Tecnológicos CEBRA.
+          Derechos Reservados.
         </div>
 
       </div>
