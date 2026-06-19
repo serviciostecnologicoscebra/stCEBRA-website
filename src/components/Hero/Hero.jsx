@@ -77,7 +77,7 @@ function Hero({ setSelectedService }) {
             que <span>impulsan</span> tu mundo.
           </h2>
 
-          <p>
+          <p className="hero-one-paragraph">
             Resolvemos problemas de TI e informática
             con servicios modernos, seguros y eficientes.
           </p>

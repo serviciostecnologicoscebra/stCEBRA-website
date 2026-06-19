@@ -82,7 +82,7 @@ function Navbar() {
         {/* BOTON */}
         <button onClick={openWhatsApp}>
           <FaWhatsapp />
-          906 257 485
+          <p>906 257 485</p>
         </button>
 
       </div>
