@@ -133,6 +133,58 @@
     }
   }
 }
+@media(min-width:2000px){
+.contact{
+  .contact-info{
+    small{
+      font-size:2.2rem !important;
+    }
+    h2{
+      font-size:3.5rem !important;
+    }
+    .contact-info-p{
+      max-width:900px;
+      font-size: 2.2rem !important;
+      text-align: justify;
+    }
+    .contact-item{
+      gap:20px;
+    }
+    .contact-item svg{
+      width:40px;
+      height:40px;
+    }
+    .contact-item p{
+      font-size: 2rem !important;
+    }
+    .primary-btn{
+      svg{
+        width: 45px;
+        height: 45px;
+      }
+      p{
+        font-size: 2.2rem !important;
+      }
+    }
+  }
+
+  .contact-form{
+    margin-top: 75px;
+    gap:30px;
+    small{
+      font-size: 2.2rem;
+    }
+    input,
+    textarea{
+      font-size:2.2rem !important;
+    }
+
+    button{
+      font-size: 2.2rem;
+    }
+  }
+}
+}
 
 @media(max-width:768px){
 

@@ -159,29 +159,64 @@
 
         filter:
         drop-shadow(0 0 10px #00d9ff);
-
       }
-
     }
-
   }
 }
+@media(min-width:2000px){
+.about-left{
+    margin-top: 80px;
+    small{
+      font-size: 2.2rem !important;
+    }
 
+    h2{
+
+      font-size:3.5rem !important;
+      min-width: 800px !important;
+    }
+    .about-left-p{
+      font-size: 2.2rem !important;
+      min-width: 800px;
+    }
+    .about-list{
+      margin-top: 80px;
+      .about-item{
+        p{
+          font-size: 2rem !important;
+          min-width: 800px !important;
+        }
+      }
+    }
+  }
+  .about-box{
+    bottom: 80px !important;
+    left: 1300px !important;
+    width: 550px !important;
+    .about-floating-card{
+      font-size: 2.4rem !important;
+    }
+    .about-icon{
+      width:100px !important;
+      height:100px !important;
+    }
+  }
+}
 @media(max-width:768px){
 
   .about{
-  min-height: auto;
- 
-  display: flex;
+    min-height: auto;
   
-  padding-top:0px;
-  padding-bottom: 100px;
+    display: flex;
+    
+    padding-top:0px;
+    padding-bottom: 100px;
 
-  background-size: 100%;
-  background-position: right 40%;
-  background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: right 40%;
+    background-repeat: no-repeat;
 
-  overflow: hidden;
+    overflow: hidden;
 
   
   .about-container{
