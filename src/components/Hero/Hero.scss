@@ -95,7 +95,7 @@
 }
 
 .hero-main{
-  max-width:650px;
+  max-width:850px;
   margin-top: -30px;
   margin-left: 40px;
 }
@@ -317,8 +317,7 @@
 @media(min-width:2000px){
  
   .hero small{
-    font-size: 2.2rem;
-    
+    font-size: 2.3rem !important;
   }
   .hero-logo-text{
     font-size:12rem;
@@ -341,16 +340,19 @@
     display:flex;
     gap:20px;
     margin-top:50px;
+    .feature-box{
+      padding: 20px;
       .heroFeature-icon{
         width:150px;
         height:150px;
       }
       h3{
-        font-size: 3rem;
+        font-size: 2.5rem;
       }
       p{
         font-size: 2.2rem;
       }
+    }
   }
   .floating-logo{
 
