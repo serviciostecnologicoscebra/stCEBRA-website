@@ -9,6 +9,19 @@ import logo from '../../assets/images/logo.png'
 function Navbar() {
 
   const [menuOpen, setMenuOpen] = useState(false)
+  //whatsapp
+  const whatsappNumber = '51906257485'
+
+  const openWhatsApp = () => {
+
+    const message =
+      'Hola, deseo información sobre sus servicios tecnológicos.'
+
+    window.open(
+      `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`,
+      '_blank'
+    )
+  }
 
   return (
     <header className="navbar">
@@ -16,7 +29,14 @@ function Navbar() {
       <div className="container navbar-container">
 
         {/* LOGO + TEXTO */}
-        <div className="brand">
+        <div className="brand"
+             onClick={() =>
+                      document
+                        .getElementById('inicio')
+                        .scrollIntoView({
+                          behavior:'smooth'
+                        })
+                    }>
 
           <img src={logo} alt="CEBRA Logo" />
 
@@ -60,9 +80,9 @@ function Navbar() {
         </div>
 
         {/* BOTON */}
-        <button>
+        <button onClick={openWhatsApp}>
           <FaWhatsapp />
-          906 257 485
+          <p>906 257 485</p>
         </button>
 
       </div>

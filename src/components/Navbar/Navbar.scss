@@ -24,6 +24,7 @@
     display: flex;
     align-items: center;
     gap: 12px;
+    cursor:pointer;
   }
 
   .brand img{
@@ -118,6 +119,57 @@
 }
 
 /* ========= RESPONSIVE ========= */
+@media (min-width: 2000px){
+
+  .navbar{
+    .navbar-container{
+      display: flex;
+      justify-content: center;
+      height: 160px;
+      gap: 210px;
+    }
+    .brand{
+      img{
+        width: 100px;
+      }
+
+      .brand-text{
+        line-height:0.3;
+      }
+
+      .logo-text{
+        font-size: 5rem;
+      }
+
+      .top-text{
+        font-size: 1.4rem;
+      }
+    }
+
+    nav{
+      gap:50px;
+      
+      a{
+        font-size: 1.8rem;
+      }
+      [href="#nosotros"]{
+        width: max-content; 
+      }
+    }
+
+  /* ========= BUTTON ========= */
+
+  button{
+   font-size: 30px;
+   gap: 0px;
+   p{
+    width: 200px;
+    font-size: 30px;
+   }
+  }
+ }
+
+}
 
 @media(max-width:1100px){
 

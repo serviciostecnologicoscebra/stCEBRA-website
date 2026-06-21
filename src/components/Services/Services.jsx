@@ -1,51 +1,16 @@
+import { useState } from 'react'
+import { services } from '../../modules/services/services';
 import './Services.scss'
 import imgServices from '../../assets/images/services.png'
+function Services({
 
-const services = [
-  {
-    icon: '🎧',
-    title: 'Accesorios de Tecnología',
-    desc: 'Los mejores accesorios para mejorar tu experiencia.',
-  },
-  {
-    icon: '💾',
-    title: 'Repuestos Informáticos',
-    desc: 'Componentes originales y compatibles con garantía.',
-  },
-  {
-    icon: '💻',
-    title: 'Repotenciación de PCs',
-    desc: 'Mejoramos el rendimiento de tus equipos.',
-  },
-  {
-    icon: '🛠️',
-    title: 'Problemas de TI e Informática',
-    desc: 'Solucionamos errores de hardware y software.',
-  },
-  {
-    icon: '🪟',
-    title: 'Instalación y Activación de Programas Originales',
-    desc: 'Software original y configuraciones profesionales.',
-  },
-  {
-    icon: '🌐',
-    title: 'Desarrollo de Páginas y Sistemas Web',
-    desc: 'Creamos páginas y sistemas modernos.',
-  },
-  {
-    icon: '📹',
-    title: 'Cámaras de Seguridad',
-    desc: 'Videovigilancia profesional para hogares y negocios.',
-  },
-  {
-    icon: '🔌',
-    title: 'Instalación de Cableado Estructurado de Red',
-    desc: 'Redes estables, organizadas y de alto rendimiento.',
-  },
-]
+  selectedService,
 
-function Services() {
+  setSelectedService
+
+}) {
   return (
+    <>
     <section className="services" id="servicios">
 
       <div className="container">
@@ -66,7 +31,7 @@ function Services() {
           <div>
           <img
                     src={imgServices}
-                    alt="CEBRA"
+                    alt="imgServices"
                     className="floating-services"
                   />
                   </div>
@@ -75,10 +40,20 @@ function Services() {
         <div className="services-grid">
 
           {services.map((service, index) => (
-            <div className="service-card" key={index}>
+            <div
+              className="service-card"
+              key={index}
+
+              onClick={() =>
+
+                setSelectedService(service)
+
+              }
+
+            >
              <div className="service-left">
               <div className="service-image">
-                <span>{service.icon}</span>
+                {service.icon}
               </div>
 
               <div className="service-content">
@@ -95,6 +70,80 @@ function Services() {
       </div>
 
     </section>
+    {
+    selectedService && (
+
+    <div className="modal-overlay">
+
+      <div className="modal">
+
+        <button
+
+          className="close-btn"
+
+          onClick={() =>
+
+            setSelectedService(null)
+
+          }
+
+        >
+
+          ✕
+
+        </button>
+
+        <div className="modal-image">
+
+          {selectedService.icon}
+
+        </div>
+
+        <h2>
+
+          {selectedService.title}
+
+        </h2>
+
+        <p>
+
+          {selectedService.desc}
+
+        </p>
+
+        <button
+
+          className="whatsapp-btn"
+
+          onClick={() =>
+
+            window.open(
+
+              `https://wa.me/51906257485?text=${encodeURIComponent(
+
+                selectedService.whatsapp
+
+              )}`,
+
+              '_blank'
+
+            )
+
+          }
+
+        >
+
+          Solicitar por WhatsApp
+
+        </button>
+
+      </div>
+
+    </div>
+
+    )
+    }
+    </>
   )
 }
 

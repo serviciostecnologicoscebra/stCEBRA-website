@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react'
+import { services } from '../../modules/services/services';
 import './Hero.scss'
 
 //icons
 import {ShieldCheck, Zap, Settings} from 'lucide-react'
 import logo from '../../assets/images/logo.png'
 
-function Hero() {
-
+function Hero({ setSelectedService }) {
+ 
   //scroll
   const [scrolled, setScrolled] = useState(false)
 
@@ -28,6 +29,20 @@ function Hero() {
       window.removeEventListener('scroll', handleScroll)
 
   }, [])
+
+  //whatsapp
+  const whatsappNumber = '51906257485'
+
+  const openWhatsApp = () => {
+
+    const message =
+      'Hola, deseo información sobre sus servicios tecnológicos.'
+
+    window.open(
+      `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`,
+      '_blank'
+    )
+  }
 
   return (
 
@@ -62,18 +77,26 @@ function Hero() {
             que <span>impulsan</span> tu mundo.
           </h2>
 
-          <p>
+          <p className="hero-one-paragraph">
             Resolvemos problemas de TI e informática
             con servicios modernos, seguros y eficientes.
           </p>
 
           <div className="hero-buttons">
 
-            <button className="primary-btn">
+            <button className="primary-btn" onClick={openWhatsApp}>
               WhatsApp
             </button>
 
-            <button className="secondary-btn">
+            <button className="secondary-btn"
+                    onClick={() =>
+                      document
+                        .getElementById('servicios')
+                        .scrollIntoView({
+                          behavior:'smooth'
+                        })
+                    }
+                  >
               Nuestros servicios
             </button>
 
@@ -81,7 +104,20 @@ function Hero() {
 
           <div className="hero-features">
 
-            <div className="feature-box">
+            <div className="feature-box"
+                  onClick={() =>
+
+                      setSelectedService(
+
+                        services.find(
+
+                          service =>
+
+                            service.id === 'instalacion-programas'
+                        )
+                      )
+                    }
+                  >
 
               <ShieldCheck className='heroFeature-icon'/>
 
@@ -92,7 +128,19 @@ function Hero() {
 
             </div>
 
-            <div className="feature-box">
+            <div className="feature-box"
+                 onClick={() =>
+
+                      setSelectedService(
+
+                        services.find(
+
+                          service =>
+
+                            service.id === 'soluciones-ti'
+                        )
+                      )
+                    }>
 
               <Zap className='heroFeature-icon'/>
 
@@ -103,7 +151,14 @@ function Hero() {
 
             </div>
 
-            <div className="feature-box">
+            <div className="feature-box"
+                 onClick={() =>
+                      document
+                        .getElementById('servicios')
+                        .scrollIntoView({
+                          behavior:'smooth'
+                        })
+                    }>
 
               <Settings className='heroFeature-icon'/>
 

@@ -62,7 +62,14 @@ function About() {
 
         </div>
 
-        <div className="about-box">
+        <div className="about-box"
+             onClick={() =>
+                      document
+                        .getElementById('contacto')
+                        .scrollIntoView({
+                          behavior:'smooth'
+                        })
+                    }>
          <ShieldCheck className='about-icon'/>
           <div className="about-floating-card">
             Calidad, Seguridad y Confianza

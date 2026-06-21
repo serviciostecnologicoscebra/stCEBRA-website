@@ -45,7 +45,30 @@
     text-align:right;
   }
 }
+@media(min-width:2000px){
 
+  .footer{
+    .footer-container{
+      flex-direction:column;
+      text-align:center;
+      gap: 10px;
+      .footer-logo{
+        .top-text{
+          font-size: 1.5rem;
+        }
+        .logo-text{
+          span{
+          font-size: 4rem !important;
+          }
+        }
+      }
+      .footer-copy{
+        font-size:1.5rem;
+      }
+    }
+  }
+
+}
 @media(max-width:768px){
 
   .footer{
