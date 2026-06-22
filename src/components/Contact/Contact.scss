@@ -29,7 +29,7 @@
       font-weight:900;
 
       span{
-        color:$cyan;
+        color:$sky-blue;
       }
     }
 
@@ -113,6 +113,10 @@
 
       &:focus{
         border-color:$cyan;
+      }
+      &::placeholder{
+        color:$text;
+        opacity:1;
       }
     }
 
@@ -215,7 +219,7 @@
       font-weight:900;
 
       span{
-        color:$cyan;
+        color:$sky-blue;
       }
     }
 
