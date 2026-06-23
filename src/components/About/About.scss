@@ -202,6 +202,46 @@
     }
   }
 }
+@media(max-width:1100px){
+.about-left{
+   
+    margin-left: 20px;
+    small{
+      font-size: 0.9rem !important;
+    }
+    h2{
+      font-size:1.8rem !important;
+      max-width: 500px !important;
+    }
+    .about-left-p{
+      font-size: 0.9rem !important;
+      max-width: 400px;
+    }
+    .about-list{
+      margin-top: 20px;
+      margin-left: 30px;
+      .about-item{
+        p{
+          font-size: 0.9rem !important;
+          min-width: 800px !important;
+        }
+      }
+    }
+  }
+  .about-box{
+    bottom: 210px !important;
+    left: 620px !important;
+    width: 200px !important;
+    .about-floating-card{
+      font-size: 1rem !important;
+    }
+    .about-icon{
+      margin-top:0px !important;
+      width:80px !important;
+      height:80px !important;
+    }
+  }
+}
 @media(max-width:768px){
 
   .about{

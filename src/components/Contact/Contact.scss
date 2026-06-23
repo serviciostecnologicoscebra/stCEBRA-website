@@ -189,6 +189,61 @@
   }
 }
 }
+@media(max-width:1100px){
+.contact{
+  margin-top: -60px;
+  .contact-info{
+    small{
+      font-size:0.9rem !important;
+    }
+    h2{
+      font-size:1.8rem !important;
+      min-width:400px !important;
+    }
+    .contact-info-p{
+      max-width:400px;
+      font-size: 0.9rem !important;
+      text-align: justify;
+    }
+    .contact-item{
+      gap:10px;
+    }
+    .contact-item svg{
+      width:20px;
+      height:20px;
+    }
+    .contact-item p{
+      font-size: 0.9rem !important;
+    }
+    .primary-btn{
+      svg{
+        margin-top: -3px;
+        width: 25px;
+        height: 25px;
+      }
+      p{
+        font-size: 1.2rem !important;
+      }
+    }
+  }
+
+  .contact-form{
+    margin-top: 0px;
+    gap:10px;
+    small{
+      font-size: 0.9rem;
+    }
+    input,
+    textarea{
+      font-size:0.9rem !important;
+    }
+
+    button{
+      font-size: 1.2rem;
+    }
+  }
+}
+}
 
 @media(max-width:768px){
 
