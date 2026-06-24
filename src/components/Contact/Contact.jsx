@@ -113,31 +113,39 @@ function Contact() {
 
             <div className="contact-data">
 
-              <div className="contact-item">
+              <div className="contact-item" 
+                   onClick={openWhatsApp}
+                   style={{ cursor: "pointer" }}>
                 <Phone />
                 <p>906 257 485</p>
               </div>
 
-              <div className="contact-item">
+              <div className="contact-item"
+                    onClick={() => window.open("https://maps.app.goo.gl/Zzd29V5CYK39Wgj2A?g_st=awb", "_blank")}
+                    style={{ cursor: "pointer" }}>
                 <MapPin />
                 <p>Paita, Piura, Perú</p>
               </div>
 
-              <div className="contact-item">
+              <div className="contact-item"
+                   onClick={openWhatsApp}
+                   style={{ cursor: "pointer" }}>
                 <Headset />
                 <p>Atención nacional</p>
               </div>
 
-              <div className="contact-item">
+              <div className="contact-item"
+                   onClick={() => window.open("https://www.facebook.com/share/1EdTCzqLSc/", "_blank")}
+                   style={{ cursor: "pointer" }}>
                 <FaFacebook />
-                <p onClick={() => window.open("https://www.facebook.com/share/1EdTCzqLSc/", "_blank")}
-                   style={{ cursor: "pointer" }}>Facebook</p>
+                <p>Facebook</p>
               </div>
 
-              <div className="contact-item">
+              <div className="contact-item"
+                   onClick={() => window.open("https://www.tiktok.com/@stcebra", "_blank")}
+                   style={{ cursor: "pointer" }}>
                 <FaTiktok />
-                <p onClick={() => window.open("https://www.tiktok.com/@stcebra", "_blank")}
-                   style={{ cursor: "pointer" }}>TikTok</p>
+                <p>TikTok</p>
               </div>
 
               <button

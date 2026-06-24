@@ -53,6 +53,8 @@
       display:flex;
       align-items:center;
       gap:15px;
+      width:fit-content;
+      
     }
     .contact-item svg{
 
@@ -69,6 +71,7 @@
 
       color:$text;
       font-size: 1.2rem;
+      
     }
     .primary-btn{
       display:flex;
@@ -206,14 +209,17 @@
       text-align: justify;
     }
     .contact-item{
-      gap:10px;
-    }
-    .contact-item svg{
-      width:20px;
-      height:20px;
-    }
-    .contact-item p{
-      font-size: 0.9rem !important;
+      svg{
+        width:25px;
+        height:25px;
+        min-width:22px;
+      }
+
+      p{
+        margin:0;
+        color:$text;
+        font-size:0.8rem !important;
+      }
     }
     .primary-btn{
       svg{
@@ -228,7 +234,7 @@
   }
 
   .contact-form{
-    margin-top: 0px;
+    margin-top: 23px;
     gap:10px;
     small{
       font-size: 0.9rem;
@@ -267,9 +273,14 @@
         font-size: 0.8rem !important;
       }
       h2{
+        text-align: center;
         font-size:1.3rem !important;
         margin:10px 0;
         font-weight:900;
+        min-width: 0 !important;
+        width: 100%;
+        max-width: 100%;
+        word-break: break-word;
       }
       .contact-info-p{
         max-width:fit-content;
@@ -342,5 +353,11 @@
       }
     }
    }
+  }
+}
+@media(max-width:425px){
+
+  .contact{
+    padding-top: 150px;
   }
 }

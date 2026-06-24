@@ -72,16 +72,15 @@
 @media(max-width:768px){
 
   .footer{
-
+    padding: 10px;
     .footer-container{
       flex-direction:column;
       text-align:center;
+      gap: 10px;
     }
-
     .footer-copy{
       text-align:center;
+      font-size: .6rem !important;
     }
-
   }
-
 }
