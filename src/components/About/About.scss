@@ -202,151 +202,203 @@
     }
   }
 }
-@media(max-width:768px){
-
-  .about{
-    min-height: auto;
-  
-    display: flex;
-    
-    padding-top:0px;
-    padding-bottom: 100px;
-
-    background-size: 100%;
-    background-position: right 40%;
-    background-repeat: no-repeat;
-
-    overflow: hidden;
-
-  
-  .about-container{
-
-    display:block;
-    margin-top:-5px;
-    
-  }
-
-  .about-left{
-    padding-left: 10px;
-
+@media(max-width:1100px){
+.about-left{
+   
+    margin-left: 20px;
     small{
-      color:$red;
-      letter-spacing:2px;
-      font-weight:700;
-      font-size: 0.8rem;
+      font-size: 0.9rem !important;
     }
-
     h2{
-      font-size:1.05rem;
-      margin:1px 0px 20px;
-      font-weight:900;
-
-      span{
-        color:$sky-blue;
-      }
+      font-size:1.8rem !important;
+      max-width: 500px !important;
     }
-
     .about-left-p{
-      display: none;
+      font-size: 0.9rem !important;
+      max-width: 400px;
     }
-
     .about-list{
-      display:flex;
-      flex-direction:column;
-      gap:5px;
-    }
-
-    .about-item{
-      display:flex;
-      align-items:center;
-      gap:10px;
-
-      span{
-        width:10px;
-        height:10px;
-        border-radius:50%;
-        background:$red;
-        box-shadow:$shadow-red;
-      }
-
-      p{
-        margin:0;
-        font-size: .6rem;
-        max-width: 150px;
+      margin-top: 20px;
+      margin-left: 30px;
+      .about-item{
+        span{
+            width: 10px !important;
+            height: 10px !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+          }
+        p{
+          font-size: 0.9rem !important;
+          min-width: 800px !important;
+        }
       }
     }
   }
   .about-box{
-
-    display:flex;
-    align-items:flex-start;
-    gap:10px;
-    position:absolute;
-    bottom:5px;
-    left:40px;
-
-    background:rgba(10,15,35,.72);
-
-    border:1px solid rgba(255,255,255,.08);
-
-    padding:10px 25px;
-
-    max-width:250px;
-
-    border-radius:20px;
-    cursor:pointer;
-
-    transition:.3s ease;
-
-    animation:
-      floatLaptopLogo 4s ease-in-out infinite;
-
-    filter:
-      drop-shadow(0 0 12px rgba(0,217,255,.4))
-      drop-shadow(0 0 35px rgba(0,217,255,.1));
-
-    &:hover{
-
-      transform:translateY(-6px);
-
-      border-color:#00d9ff;
-
-      box-shadow:0 0 20px rgba(0,217,255,.2);
-    }
-
+    bottom: 210px !important;
+    left: 620px !important;
+    width: 200px !important;
     .about-floating-card{
-
-      margin-bottom:2px;
-      color:white;
-  
-      line-height:1.5;
-      letter-spacing:.1px;
-      font-size: 1rem;
+      font-size: 1rem !important;
     }
-
     .about-icon{
-
-      color:#00d9ff;
-
-      width:50px;
-      height:50px;
-
-      margin-top:0px;
-
-      transition:.3s ease;
-
-      &:hover{
-
-        transform:scale(1.1);
-
-        filter:
-        drop-shadow(0 0 10px #00d9ff);
-
-      }
-
+      margin-top:0px !important;
+      width:80px !important;
+      height:80px !important;
     }
-
   }
 }
+@media(max-width:768px){
 
+  .about{
+    overflow:hidden;
+    padding-top: 0px;
+    margin-bottom: -150px;
+    .about-left{
+      display: flex;
+      flex-direction: column;
+      margin-top: -150px;
+      margin-left: 20px;
+      small{
+        font-size: 0.8rem !important;
+      }
+      h2{
+        font-size:1.3rem !important;
+        max-width: 300px !important;
+      }
+      .about-left-p{
+        display: none;
+      }
+      .about-list{
+        margin-top: 20px;
+        margin-left: 3px;
+        .about-item{
+          gap: 10px;
+          span{
+            width: 10px !important;
+            height: 10px !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+          }
+          p{
+            font-size: 0.8rem !important;
+            
+          }
+        }
+      }
+    }
+    .about-box{
+      left:auto !important;
+      right:145px !important;
+      bottom:300px !important;
+    }
+  }
+}
+@media(max-width:425px){
+
+  .about{
+    overflow:hidden;
+    padding-bottom: 150px;
+    min-height: 255px;
+
+    .about-left{
+      display: flex;
+      flex-direction: column;
+      margin-top: 18px;
+      margin-left: 20px;
+      small{
+        font-size: 0.8rem !important;
+      }
+      h2{
+        font-size:1.2rem !important;
+        max-width: 130px !important;
+        margin: 1px 1px;
+      }
+      .about-left-p{
+        display: none;
+      }
+      .about-list{
+        margin-top: 2px;
+        margin-left: 5px;
+        gap: 3px;
+        .about-item{
+          gap: 5px;
+          span{
+            width: 5px !important;
+            height: 5px !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+          }
+          p{
+            font-size: 0.6rem !important;
+          }
+        }
+      }
+    }
+    .about-box{
+      left:auto !important;
+      right:110px !important;
+      bottom:0px !important;
+    }
+  }
+}
+@media(max-width:375px){
+
+  .about{
+    .about-left{
+      display: flex;
+      flex-direction: column;
+      gap:0px;
+      margin-top: 9px;
+      margin-left: 15px;
+      small{
+        font-size: 0.8rem !important;
+        text-align: center;
+      }
+      h2{
+        font-size:1rem !important;
+        margin-top: 10px;
+      }
+    }
+    .about-box{
+      left:auto !important;
+      right:85px !important;
+      bottom:10px !important;
+    }
+  }
+}
+@media(max-width:320px){
+
+  .about{
+    .about-left{
+      display: flex;
+      flex-direction: column;
+      margin-top: 15px;
+      margin-left: 15px;
+      small{
+        font-size: 0.7rem !important;
+        text-align: center;
+        letter-spacing: 2px;
+      }
+      h2{
+        font-size:.9rem !important;
+        margin-top: 1px;
+      }
+      .about-list{
+        margin-top:10px !important;
+      }
+    }
+    
+    .about-box{
+      left:auto !important;
+      right:57px !important;
+      bottom:10px !important;
+    }
+  }
 }
