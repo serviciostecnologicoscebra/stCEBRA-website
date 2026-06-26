@@ -1,15 +1,32 @@
 import { useEffect, useState } from 'react'
 import { services } from '../../modules/services/services';
+import { heroImages } from '../../modules/hero/heroImages';
 import './Hero.scss'
 
 //icons
 import {ShieldCheck, Zap, Settings} from 'lucide-react'
-import logo from '../../assets/images/logo.png'
 
 function Hero({ setSelectedService }) {
  
   //scroll
   const [scrolled, setScrolled] = useState(false)
+  
+  //imagen flotante
+  const [currentImage, setCurrentImage] = useState(0)
+
+  useEffect(() => {
+
+    const interval = setInterval(() => {
+
+      setCurrentImage(prev =>
+        (prev + 1) % heroImages.length
+      )
+
+    }, 3000)
+
+    return () => clearInterval(interval)
+
+  }, [])
 
   useEffect(() => {
 
@@ -53,9 +70,9 @@ function Hero({ setSelectedService }) {
 
       <div className="hero-overlay"></div>
         <img
-          src={logo}
+          src={heroImages[currentImage].src}
           alt="CEBRA"
-          className="floating-logo"
+          className={`floating-logo ${heroImages[currentImage].className}`}
         />
 
       <div className="container hero-layout">
