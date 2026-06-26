@@ -1,0 +1,164 @@
+@import '../../styles/variables';
+
+.promo-banner{
+  width:100%;
+  padding:40px 20px;
+  background:linear-gradient(
+    135deg,
+    rgba(0,217,255,.18),
+    rgba(255,0,80,.18)
+  );
+}
+
+.promo-banner-content{
+  max-width:1200px;
+  margin:0 auto;
+
+  display:flex;
+  align-items:center;
+  flex-direction: column;
+  justify-content:space-between;
+  gap:30px;
+
+  padding:35px;
+
+  border-radius:25px;
+  background:rgba(10,15,35,.85);
+  border:1px solid rgba(255,255,255,.12);
+
+  box-shadow:0 0 30px rgba(0,217,255,.15);
+  .promo-image{
+    width:100%;
+    display:block;
+    margin:15px 0;
+    animation:floatBanner 4s ease-in-out infinite;
+    cursor:pointer;
+    transition:.3s ease;
+
+    &:hover{
+        transform:scale(1.02);
+    }
+  }
+
+  h2{
+    color:white;
+    font-size:2rem;
+    margin:10px 0;
+    text-align: center;
+  }
+
+  p{
+    color:$text;
+    font-size:1rem;
+    text-align: center;
+  }
+}
+
+.promo-tag{
+  display: flex;
+  flex-direction: column;
+  color:$sky-blue;
+  text-align: center;
+  font-weight:800;
+  letter-spacing:12px;
+  font-size: 1.3rem;
+  text-transform:uppercase;
+}
+
+.promo-btn{
+  background:$green;
+  color:white;
+  text-decoration:none;
+
+  padding:16px 28px;
+  border-radius:14px;
+
+  font-weight:800;
+  white-space:nowrap;
+
+  transition:.3s ease;
+
+  &:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 20px rgba(0,217,255,.25);
+  }
+}
+/* RESPONSIVE */
+@media(min-width:2000px){
+    .promo-banner-content{
+        max-width: 1800px;
+        h2{
+          font-size:2.5rem;
+        }
+        p{
+          font-size:2.2rem;
+        }
+    }
+    .promo-tag{
+        letter-spacing:20px;
+        font-size:3rem;
+    }
+
+    .promo-btn{
+        width:100%;
+        font-size:2rem;
+        text-align:center;
+    }
+}
+@media(max-width:1100px){
+    .promo-banner-content{
+
+        h2{
+          font-size:1.8rem;
+        }
+        p{
+          font-size:.9rem;
+        }
+    }
+    .promo-tag{
+        letter-spacing:10px;
+        font-size:1.8rem;
+    }
+
+    .promo-btn{
+        width:100%;
+        font-size:.9rem;
+        text-align:center;
+    }
+}
+@media(max-width:768px){
+    .promo-banner-content{
+
+        h2{
+          font-size:1.3rem;
+        }
+        p{
+          font-size:.9rem;
+        }
+    }
+    .promo-tag{
+        letter-spacing:2px;
+        font-size:1.3rem;
+    }
+
+    .promo-btn{
+        width:100%;
+        font-size:.8rem;
+        text-align:center;
+    }
+}
+@keyframes floatBanner{
+
+  0%{
+    transform:translateY(0);
+  }
+
+  50%{
+    transform:translateY(-10px);
+  }
+
+  100%{
+    transform:translateY(0);
+  }
+
+}

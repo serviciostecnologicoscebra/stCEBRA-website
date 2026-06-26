@@ -5,6 +5,7 @@ import Services from './components/Services/Services'
 import About from './components/About/About'
 import Contact from './components/Contact/Contact'
 import Footer from './components/Footer/Footer'
+import Banner from "./components/Banner/Banner";
 
 function App() {
   const [selectedService, setSelectedService] = useState(null)
@@ -15,6 +16,7 @@ function App() {
       <Hero 
         setSelectedService={setSelectedService}
       />
+      <Banner />
       <Services 
         selectedService={selectedService}
         setSelectedService={setSelectedService}
