@@ -12,7 +12,7 @@ function Banner() {
         `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`,
         '_blank'
     )
- }
+    }
 
   return (
     <section className="promo-banner">

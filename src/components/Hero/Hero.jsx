@@ -7,7 +7,7 @@ import './Hero.scss'
 import {ShieldCheck, Zap, Settings} from 'lucide-react'
 
 function Hero({ setSelectedService }) {
- 
+
   //scroll
   const [scrolled, setScrolled] = useState(false)
   
@@ -50,10 +50,9 @@ function Hero({ setSelectedService }) {
   //whatsapp
   const whatsappNumber = '51906257485'
 
-  const openWhatsApp = () => {
-
-    const message =
-      'Hola, deseo información sobre sus servicios tecnológicos.'
+  const openWhatsApp = (
+    message = 'Hola, deseo información sobre sus servicios tecnológicos.'
+  ) => {
 
     window.open(
       `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`,
@@ -73,6 +72,18 @@ function Hero({ setSelectedService }) {
           src={heroImages[currentImage].src}
           alt="CEBRA"
           className={`floating-logo ${heroImages[currentImage].className}`}
+          style={{
+            cursor: heroImages[currentImage].message
+              ? 'pointer'
+              : 'default'
+          }}
+          onClick={() => {
+            if (heroImages[currentImage].message) {
+              openWhatsApp(
+                heroImages[currentImage].message
+              )
+            }
+          }}
         />
 
       <div className="container hero-layout">
@@ -101,7 +112,7 @@ function Hero({ setSelectedService }) {
 
           <div className="hero-buttons">
 
-            <button className="primary-btn" onClick={openWhatsApp}>
+            <button className="primary-btn" onClick={() => openWhatsApp()}>
               WhatsApp
             </button>
 

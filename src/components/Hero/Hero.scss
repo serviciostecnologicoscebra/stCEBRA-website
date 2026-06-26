@@ -65,7 +65,8 @@
 
   position:absolute;
 
-  z-index:4;
+  z-index:10;
+  pointer-events:auto;
 
   transition:1s ease;
 
