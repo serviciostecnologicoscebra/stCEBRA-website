@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import './Game.scss'
 import { players } from './players'
 import Card from './Card'
+import Confetti from 'react-confetti'
 
 function Game() {
 
@@ -11,6 +12,10 @@ function Game() {
   const [gameOver, setGameOver] = useState(false)
   const [winner, setWinner] = useState(false)
   const [isChecking, setIsChecking] = useState(false)
+  const [windowSize, setWindowSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+    })
 
   const whatsappNumber = '51906257485'
 
@@ -43,6 +48,20 @@ function Game() {
     setIsChecking(false)
 
   }
+  useEffect(() => {
+
+  const handleResize = () => {
+    setWindowSize({
+      width: window.innerWidth,
+      height: window.innerHeight,
+    })
+  }
+
+  window.addEventListener('resize', handleResize)
+
+  return () => window.removeEventListener('resize', handleResize)
+
+}, [])
 
   useEffect(() => {
     shuffleCards()
@@ -113,6 +132,16 @@ function Game() {
   }
 
   return (
+    <>
+    {winner && (
+        <Confetti
+        width={windowSize.width}
+        height={windowSize.height}
+        numberOfPieces={300}
+        recycle={false}
+        gravity={0.25}
+        />
+    )}
 
     <section className="game section">
 
@@ -123,7 +152,7 @@ function Game() {
 
         <p className="subtitle">
 
-        Descubre ambas figuras antes de perder tus 3 intentos y gana un descuento del 5%.
+        Descubre ambas figuras y gana un descuento en licencias
 
         </p>
         </>
@@ -146,41 +175,79 @@ function Game() {
 
         </div>
 
-        {winner && (
+        {(winner || gameOver) && (
 
-          <div className="winner">
+        <div className="game-modal">
 
-            <h3>
-              🎉 Ganaste un descuento del 5%
-            </h3>
+            <div className="game-modal-content">
 
-            <button onClick={openWhatsApp}>
-              Reclamar por WhatsApp
+                {winner ? (
+
+                    <>
+
+                        <h2>🎉 ¡Felicidades!</h2>
+
+                        <p>
+
+                            Encontraste a Messi y Lamine.
+
+                            <br /><br />
+
+                            Ganaste un descuento del <strong>5%</strong>.
+
+                        </p>
+
+                        <button onClick={openWhatsApp}>
+
+                            Reclamar por WhatsApp
+
+                        </button>
+
+                    </>
+
+                ) : (
+
+                    <>
+
+                        <h2>😢 ¡Casi!</h2>
+
+                        <p>
+
+                            Se acabaron tus intentos.
+
+                            <br /><br />
+
+                            ¡Vuelve a intentarlo!
+
+                        </p>
+
+                        <button onClick={shuffleCards}>
+
+                            Jugar nuevamente
+
+                        </button>
+
+                    </>
+
+                )}
+             <button
+                className="close-modal"
+                onClick={shuffleCards}
+            >
+                ✕
             </button>
 
-          </div>
+            </div>
 
-        )}
-
-        {gameOver && !winner && (
-
-          <div className="loser">
-
-            <h3>
-              😢 Se acabaron los intentos
-            </h3>
-
-            <button onClick={shuffleCards}>
-              Volver a intentarlo
-            </button>
-
-          </div>
+        </div>
 
         )}
 
       </div>
 
     </section>
+    </>
+
 
   )
 
