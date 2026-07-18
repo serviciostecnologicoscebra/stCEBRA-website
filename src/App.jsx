@@ -6,6 +6,7 @@ import About from './components/About/About'
 import Contact from './components/Contact/Contact'
 import Footer from './components/Footer/Footer'
 import Banner from "./components/Banner/Banner";
+import Game from "./components/Game/Game";
 
 function App() {
   const [selectedService, setSelectedService] = useState(null)
@@ -17,6 +18,7 @@ function App() {
         setSelectedService={setSelectedService}
       />
       <Banner />
+      <Game />
       <Services 
         selectedService={selectedService}
         setSelectedService={setSelectedService}
