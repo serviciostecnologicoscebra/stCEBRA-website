@@ -134,13 +134,19 @@ function Game() {
   return (
     <>
     {winner && (
-        <Confetti
+    <Confetti
         width={windowSize.width}
         height={windowSize.height}
-        numberOfPieces={300}
+        numberOfPieces={400}
         recycle={false}
-        gravity={0.25}
-        />
+        gravity={0.18}
+        style={{
+        position: 'fixed',
+        inset: 0,
+        zIndex: 10000,
+        pointerEvents: 'none',
+        }}
+    />
     )}
 
     <section className="game section">
