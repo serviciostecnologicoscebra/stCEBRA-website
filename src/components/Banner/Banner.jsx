@@ -1,8 +1,8 @@
 import './Banner.scss'
 //images
-import BannerMundial from '../../assets/images/banner-mundial.png'
+import BannerPatrias from '../../assets/images/banner-patrias.png'
 function Banner() {
-    const whatsappNumber = '51906257485'
+    {/*const whatsappNumber = '51906257485'
     const promoMessage =
         'Hola, quiero información sobre la promoción del Mundial.'
     const openWhatsApp = (
@@ -12,7 +12,7 @@ function Banner() {
         `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`,
         '_blank'
     )
-    }
+    }*/}
 
   return (
     <section className="promo-banner">
@@ -20,18 +20,24 @@ function Banner() {
 
         <div>
           <span className="promo-tag">
-            Promo Mundial
+            JUEGA Y GANA
           </span>
  
          <img
-            src={BannerMundial}
-            alt="Banner Mundial"
+            src={BannerPatrias}
+            alt="Banner Patrias"
             className="promo-image"
-            onClick={() => openWhatsApp(promoMessage)}
+            onClick={() =>
+                      document
+                        .getElementById('game')
+                        .scrollIntoView({
+                          behavior:'smooth'
+                        })
+                    }
           />
 
           <h2>
-            30% de descuento en licencias originales
+            5% de descuento en licencias originales
           </h2>
 
           <p>
@@ -39,13 +45,13 @@ function Banner() {
           </p>
         </div>
 
-        <button
+        {/*<button
             className="promo-btn"
             onClick={() => openWhatsApp(promoMessage)}
             >
             Consultar promoción
         </button>
-
+        */}      
       </div>
     </section>
   )

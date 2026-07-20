@@ -149,7 +149,7 @@ function Game() {
     />
     )}
 
-    <section className="game section">
+    <section className="game section" id="game">
 
       <div className="container">
 
