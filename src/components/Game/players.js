@@ -1,45 +1,45 @@
-import messi from '../../assets/images/game/messi.png'
-import lamine from '../../assets/images/game/lamine.png'
-import mbappe from '../../assets/images/game/mbappe.png'
-import haaland from '../../assets/images/game/haaland.png'
-import ronaldo from '../../assets/images/game/ronaldo.png'
-import bellingham from '../../assets/images/game/bellingham.png'
+import alfonso from '../../assets/images/game/alfonso.png'
+import bolivar from '../../assets/images/game/bolivar.png'
+import bolognesi from '../../assets/images/game/bolognesi.png'
+import grau from '../../assets/images/game/grau.png'
+import martin from '../../assets/images/game/martin.png'
+import olaya from '../../assets/images/game/olaya.png'
 
 export const players = [
   {
     id: 1,
-    name: 'Messi',
-    image: messi,
+    name: 'Martin',
+    image: martin,
     winner: true,
   },
   {
     id: 2,
-    name: 'Lamine',
-    image: lamine,
+    name: 'Bolivar',
+    image: bolivar,
     winner: true,
   },
   {
     id: 3,
-    name: 'Mbappé',
-    image: mbappe,
+    name: 'Bolognesi',
+    image: bolognesi,
     winner: false,
   },
   {
     id: 4,
-    name: 'Haaland',
-    image: haaland,
+    name: 'Alfonso',
+    image: alfonso,
     winner: false,
   },
   {
     id: 5,
-    name: 'Cristiano Ronaldo',
-    image: ronaldo,
+    name: 'Grau',
+    image: grau,
     winner: false,
   },
   {
     id: 6,
-    name: 'Bellingham',
-    image: bellingham,
+    name: 'Olaya',
+    image: olaya,
     winner: false,
   },
 ]

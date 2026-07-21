@@ -22,7 +22,7 @@ function Game() {
   const openWhatsApp = () => {
 
     const message =
-      '🎉 Hola, encontré a Messi y Lamine en el juego y quiero reclamar mi descuento del 5%.'
+      '🎉 Hola, encontré a Jose de San Martin y Simon Bolivar en el juego y quiero reclamar mi descuento del 5%.'
 
     window.open(
       `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`,
@@ -82,7 +82,7 @@ function Game() {
       )
     )
 
-    // Si es Messi o Lamine
+    // Si es Jose de San Martin o Simon Bolivar
     if (card.winner) {
 
       const updatedFound = [...found, card.name]
@@ -90,8 +90,8 @@ function Game() {
       setFound(updatedFound)
 
       if (
-        updatedFound.includes('Messi') &&
-        updatedFound.includes('Lamine')
+        updatedFound.includes('Martin') &&
+        updatedFound.includes('Bolivar')
       ) {
         setWinner(true)
       }
@@ -154,11 +154,11 @@ function Game() {
       <div className="container">
 
         <>
-        <h2>🎮 Encuentra a Messi y Lamine</h2>
+        <h2>🎮 Encuentra a Jose de San Martin y Simon Bolivar</h2>
 
         <p className="subtitle">
 
-        Descubre ambas figuras y gana un descuento en licencias
+        Descubre ambas figuras y gana el 5% descuento en licencia de Windows, Office, Antivirus
 
         </p>
         </>
@@ -195,7 +195,7 @@ function Game() {
 
                         <p>
 
-                            Encontraste a Messi y Lamine.
+                            Encontraste a Jose de San Martin y Simon Bolivar.
 
                             <br /><br />
 
