@@ -1,5 +1,5 @@
 import logo from '../../assets/images/logo.png'
-import mascotasMundial from '../../assets/images/mascotas-mundial.png'
+import libertadoresGame from '../../assets/images/libertadores-game.png'
 
 export const heroImages = [
   {
@@ -8,9 +8,9 @@ export const heroImages = [
     
   },
   {
-    src: mascotasMundial,
-    className: 'mascotas-logo',
-    message: 'Hola, quiero información sobre la promoción del Mundial.'
+    src: libertadoresGame,
+    className: 'libertadores-game',
+    message: 'Hola, quiero información.'
   }
   
 ]

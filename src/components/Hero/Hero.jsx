@@ -79,9 +79,14 @@ function Hero({ setSelectedService }) {
           }}
           onClick={() => {
             if (heroImages[currentImage].message) {
-              openWhatsApp(
+                      document
+                        .getElementById('game')
+                        .scrollIntoView({
+                          behavior:'smooth'
+                        })
+              /*openWhatsApp(
                 heroImages[currentImage].message
-              )
+              )*/
             }
           }}
         />
