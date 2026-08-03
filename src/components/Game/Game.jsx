@@ -22,7 +22,7 @@ function Game() {
   const openWhatsApp = () => {
 
     const message =
-      '🎉 Hola, encontré a Jose de San Martin y Simon Bolivar en el juego y quiero reclamar mi descuento del 5%.'
+      '🎉 Hola, encontré los dos logos de CEBRA en el juego y quiero reclamar mi descuento del 5%.'
 
     window.open(
       `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`,
@@ -82,7 +82,7 @@ function Game() {
       )
     )
 
-    // Si es Jose de San Martin o Simon Bolivar
+    // Si es logoCEBRA1 - logoCEBRA2
     if (card.winner) {
 
       const updatedFound = [...found, card.name]
@@ -90,8 +90,8 @@ function Game() {
       setFound(updatedFound)
 
       if (
-        updatedFound.includes('Martin') &&
-        updatedFound.includes('Bolivar')
+        updatedFound.includes('CartaLogo1') &&
+        updatedFound.includes('CartaLogo2')
       ) {
         setWinner(true)
       }
@@ -154,7 +154,7 @@ function Game() {
       <div className="container">
 
         <>
-        <h2>🎮 Encuentra a Jose de San Martin y Simon Bolivar</h2>
+        <h2>🎮 Encuentra los 2 logos de CEBRA</h2>
 
         <p className="subtitle">
 
@@ -195,7 +195,7 @@ function Game() {
 
                         <p>
 
-                            Encontraste a Jose de San Martin y Simon Bolivar.
+                            Encontraste los dos logos.
 
                             <br /><br />
 

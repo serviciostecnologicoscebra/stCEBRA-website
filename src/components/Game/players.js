@@ -1,45 +1,45 @@
-import alfonso from '../../assets/images/game/alfonso.png'
-import bolivar from '../../assets/images/game/bolivar.png'
-import bolognesi from '../../assets/images/game/bolognesi.png'
-import grau from '../../assets/images/game/grau.png'
-import martin from '../../assets/images/game/martin.png'
-import olaya from '../../assets/images/game/olaya.png'
+import CartaLogo1 from '../../assets/images/game/Carta-logo1.png'
+import CartaLogo2 from '../../assets/images/game/Carta-logo2.png'
+import CartaWindows from '../../assets/images/game/Carta-windows.png'
+import CartaOffice from '../../assets/images/game/Carta-office.png'
+import CartaEset from '../../assets/images/game/Carta-eset.png'
+import CartaRobot from '../../assets/images/game/Carta-robot.png'
 
 export const players = [
   {
     id: 1,
-    name: 'Martin',
-    image: martin,
+    name: 'CartaLogo1',
+    image: CartaLogo1,
     winner: true,
   },
   {
     id: 2,
-    name: 'Bolivar',
-    image: bolivar,
+    name: 'CartaLogo2',
+    image: CartaLogo2,
     winner: true,
   },
   {
     id: 3,
-    name: 'Bolognesi',
-    image: bolognesi,
+    name: 'CartaWindows',
+    image: CartaWindows,
     winner: false,
   },
   {
     id: 4,
-    name: 'Alfonso',
-    image: alfonso,
+    name: 'CartaOffice',
+    image: CartaOffice,
     winner: false,
   },
   {
     id: 5,
-    name: 'Grau',
-    image: grau,
+    name: 'CartaEset',
+    image: CartaEset,
     winner: false,
   },
   {
     id: 6,
-    name: 'Olaya',
-    image: olaya,
+    name: 'CartaRobot',
+    image: CartaRobot,
     winner: false,
   },
 ]

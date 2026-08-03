@@ -1,5 +1,5 @@
 import logo from '../../assets/images/logo.png'
-import libertadoresGame from '../../assets/images/libertadores-game.png'
+import descuento from '../../assets/images/game/descuentoLogo.png'
 
 export const heroImages = [
   {
@@ -8,8 +8,8 @@ export const heroImages = [
     
   },
   {
-    src: libertadoresGame,
-    className: 'libertadores-game',
+    src: descuento,
+    className: 'descuento',
     message: 'Hola, quiero información.'
   }
   

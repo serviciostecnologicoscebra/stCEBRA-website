@@ -1,6 +1,6 @@
 import './Banner.scss'
 //images
-import BannerPatrias from '../../assets/images/banner-patrias.png'
+import descuento from '../../assets/images/game/descuentoLogo.png'
 function Banner() {
     {/*const whatsappNumber = '51906257485'
     const promoMessage =
@@ -24,8 +24,8 @@ function Banner() {
           </span>
  
          <img
-            src={BannerPatrias}
-            alt="Banner Patrias"
+            src={descuento}
+            alt="descuento"
             className="promo-image"
             onClick={() =>
                       document
