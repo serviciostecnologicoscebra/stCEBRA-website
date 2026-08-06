@@ -18,7 +18,7 @@ function Projects() {
           <h1 className="project-title">Proyectos</h1>
 
           <p className="project-subtitle">Paginas Web</p>
-          <div className="project-grid">
+          <div className="projects-grid">
             <div className="project-card">
             <img className="img-one" src={veterinariaWeb} />
 
