@@ -65,6 +65,7 @@ export const services = [
                className="img-services"/>,
     title: 'Desarrollo de Páginas y Sistemas Web',
     desc: 'Creamos páginas y sistemas modernos.',
+
      whatsapp:
       'Hola, me interesa el servicio de Desarrollo de Paginas Web.'
   },

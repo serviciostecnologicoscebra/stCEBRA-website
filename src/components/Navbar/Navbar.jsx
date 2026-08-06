@@ -1,5 +1,5 @@
 import { useState } from 'react'
-
+import { Link } from "react-router-dom";
 import './Navbar.scss'
 import { FaWhatsapp } from 'react-icons/fa'
 import { Menu, X } from 'lucide-react'
@@ -66,10 +66,15 @@ function Navbar() {
 
         {/* MENU */} 
         <nav className={menuOpen ? 'nav-open' : ''}>
-          <a href="#inicio">INICIO</a>
-          <a href="#servicios">SERVICIOS</a>
-          <a href="#nosotros">¿POR QUÉ ELEGIRNOS?</a>
-          <a href="#contacto">CONTACTO</a>
+          <a href="/#inicio">Inicio</a>
+
+          <a href="/#servicios">Servicios</a>
+
+          <Link to="/proyectos">Proyectos</Link>
+
+          <a href="/#nosotros">¿Por qué elegirnos?</a>
+
+          <a href="/#contacto">Contacto</a>
         </nav>
 
         <div
