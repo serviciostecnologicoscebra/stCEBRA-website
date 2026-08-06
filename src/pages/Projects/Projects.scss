@@ -10,13 +10,6 @@
         font-size: 1rem;
         padding-bottom: 15px;
     }
-    .projects-grid {
-        width: min(1200px, 90%);
-        margin: auto;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-        gap: 30px;
-    }
     .project-card {
         background: #161b22;
         border-radius: 15px;
