@@ -212,6 +212,7 @@
 
     .top-text{
       font-size: .4rem;
+      margin-bottom: auto;
     }
 
      nav{
@@ -288,6 +289,9 @@
       display: none;
     }
 
+  }
+  .navbar-container{
+    height: 45px !important;
   }
 
 
