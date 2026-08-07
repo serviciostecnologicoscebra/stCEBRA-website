@@ -1,8 +1,5 @@
 import { useState } from "react";
-<<<<<<< HEAD
-=======
 import { Helmet } from "react-helmet-async";
->>>>>>> develop
 import Navbar from '../components/Navbar/Navbar'
 import Hero from '../components/Hero/Hero'
 import Services from '../components/Services/Services'
@@ -17,8 +14,6 @@ function Home() {
 
   return (
     <>
-<<<<<<< HEAD
-=======
       <Helmet>
         <title>Servicios Tecnológicos CEBRA | Mantenimiento y Tecnología</title>
 
@@ -35,7 +30,6 @@ function Home() {
         <meta name="author" content="Servicios Tecnológicos CEBRA" />
       </Helmet>
       
->>>>>>> develop
       <Navbar />
       <Hero 
         setSelectedService={setSelectedService}

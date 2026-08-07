@@ -1,16 +1,11 @@
 import "./Projects.scss"
-<<<<<<< HEAD
-=======
 import { Helmet } from "react-helmet-async";
 
->>>>>>> develop
 import Navbar from "../../components/Navbar/Navbar";
 import veterinariaWeb from "./images/veterinaria-web.png"
 function Projects() {
   return (
     <>
-<<<<<<< HEAD
-=======
       <Helmet>
         <title>Proyectos | Servicios Tecnológicos CEBRA</title>
 
@@ -20,7 +15,6 @@ function Projects() {
         />
       </Helmet>
       
->>>>>>> develop
       <Navbar />
 
       <main
