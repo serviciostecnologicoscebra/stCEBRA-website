@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import Navbar from '../components/Navbar/Navbar'
 import Hero from '../components/Hero/Hero'
 import Services from '../components/Services/Services'
@@ -13,6 +14,22 @@ function Home() {
 
   return (
     <>
+      <Helmet>
+        <title>Servicios Tecnológicos CEBRA | Mantenimiento y Tecnología</title>
+
+        <meta
+          name="description"
+          content="Servicios Tecnológicos CEBRA. Mantenimiento de computadoras, instalación de Windows, Office, licencias originales, desarrollo web, cámaras de seguridad y soporte técnico."
+        />
+
+        <meta
+          name="keywords"
+          content="mantenimiento de computadoras, Windows, Office, soporte técnico, desarrollo web, cámaras de seguridad, Lima, Perú"
+        />
+
+        <meta name="author" content="Servicios Tecnológicos CEBRA" />
+      </Helmet>
+      
       <Navbar />
       <Hero 
         setSelectedService={setSelectedService}
