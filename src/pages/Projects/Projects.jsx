@@ -1,9 +1,26 @@
 import "./Projects.scss"
+<<<<<<< HEAD
+=======
+import { Helmet } from "react-helmet-async";
+
+>>>>>>> develop
 import Navbar from "../../components/Navbar/Navbar";
 import veterinariaWeb from "./images/veterinaria-web.png"
 function Projects() {
   return (
     <>
+<<<<<<< HEAD
+=======
+      <Helmet>
+        <title>Proyectos | Servicios Tecnológicos CEBRA</title>
+
+        <meta
+          name="description"
+          content="Conoce algunos de los proyectos desarrollados por Servicios Tecnológicos CEBRA."
+        />
+      </Helmet>
+      
+>>>>>>> develop
       <Navbar />
 
       <main
