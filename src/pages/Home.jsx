@@ -28,7 +28,46 @@ function Home() {
         />
 
         <meta name="author" content="Servicios Tecnológicos CEBRA" />
+        <meta property="og:title" content="Servicios Tecnológicos CEBRA" />
+
+        <meta
+          property="og:description"
+          content="Mantenimiento de computadoras, licencias, desarrollo web y soporte técnico."
+        />
+
+        <meta property="og:image" content="/og-image.png" />
+
+        <meta property="og:type" content="website" />
       </Helmet>
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "@id": "https://stcebra.vercel.app/#business",
+          name: "Servicios Tecnológicos CEBRA",
+          url: "https://stcebra.vercel.app",
+          logo: "https://stcebra.vercel.app/logo.png",
+          image: "https://stcebra.vercel.app/og-image.png",
+          description:
+            "Servicios Tecnológicos CEBRA ofrece mantenimiento de computadoras, instalación de Windows y Office, desarrollo web, soporte técnico y soluciones tecnológicas.",
+
+          telephone: "+51906257485",
+          email: "serviciostecnologicoscebra@gmail.com",
+
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Ciudad Blanca",
+            addressLocality: "Paita",
+            addressRegion: "Piura",
+            addressCountry: "PE"
+          },
+
+          areaServed: {
+            "@type": "Country",
+            name: "Perú"
+          },
+        })}
+      </script>
       
       <Navbar />
       <Hero 
